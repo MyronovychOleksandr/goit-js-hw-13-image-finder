@@ -10,7 +10,6 @@ export default {
             let url = `https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=${this.query}&page=${this.page}&per_page=12&key=${this.apiKey}`
             let response = await fetch(url);
             let result = await response.json() 
-            console.log(result.hits);
             return result.hits;
         },
 
